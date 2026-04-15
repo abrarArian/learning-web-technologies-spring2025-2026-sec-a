@@ -14,3 +14,14 @@
 
 ?>
  
+<form method="post">
+    Name: <input type="text" name="name">
+<input type="submit" name="submitB">
+</form>
+ 
+<?php
+if(isset($_POST['submitB'])){
+    $name = $_POST['name'];
+    echo "Displayed on Current Page: " . $name;
+}
+?>
