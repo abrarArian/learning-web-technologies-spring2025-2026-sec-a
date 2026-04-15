@@ -25,3 +25,31 @@ if(isset($_POST['submitB'])){
     echo "Displayed on Current Page: " . $name;
 }
 ?>
+<?php
+
+    $nameValue = "";
+
+    if(isset($_POST['name'])){
+
+        $nameValue = $_POST['name'];
+
+    }
+
+?>
+ 
+<form method="post">
+
+    Name: <input type="text" name="name" value="<?php echo $nameValue; ?>">
+<input type="submit" name="submitC">
+</form>
+ 
+<?php 
+
+    if(!empty($nameValue)) {
+
+        echo "Current value: " . $nameValue;
+
+    }
+
+?>
+ 
